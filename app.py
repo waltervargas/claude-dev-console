@@ -30,26 +30,9 @@ def main():
     st.session_state.prompt = get_prompt_input()
     st.session_state.response = display_response_markdown(
         "You are a seasoned C developer expert on \"Ray Casting\" and minilibx libft and game development.",
-        """I'll help you implement texture mapping for the walls. Let's break this down into manageable steps.
-
-First, let's create a structure to hold the texture information:
-
-```c
-typedef struct s_texture {
-    void    *img;
-    char    *addr;
-    int     bits_per_pixel;
-    int     line_length;
-    int     endian;
-    int     width;
-    int     height;
-} t_texture;
-```
-        """,
+        """---""",
         st.session_state.prompt, 
         st.session_state.code, 
         st.session_state.additional_file)
-    
-   
 if __name__ == "__main__":
     main()
